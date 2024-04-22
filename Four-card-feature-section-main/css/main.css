@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+body{
+    background-color: var(--Very-Light-Gray);
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 1.5rem;
+}
+.container{
+    margin-bottom: 2rem;
+}
+.container .title{
+    max-width: 400px;
+    text-align: center;
+    margin: 20px auto;
+    font-weight: 200;
+    color: var(--Very-Dark-Blue);
+}
+.container .title span{
+    font-weight: 600;
+    font-size: 31px;
+}
+.container .about{
+    width: 470px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+    color: var(--Grayish-Blue);
+}
+.icons > div{
+    width: 350px;
+    height: 250px;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .2);
+    position: relative;
+    overflow: hidden;
+}
+.icons{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 20px 20px;
+}
+.icons > div::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 5px;
+}
+.icons .super::before{
+    background-color: var(--Cyan);
+}
+.icons .team::before{
+    background-color: var(--Red);
+}
+.icons .karma::before{
+    background-color: var(--Orange);
+}
+.icons .calc::before{
+    background-color: var(--Blue);
+}
+.icons .super{
+    grid-area: 2 / 1 / 4 / 2;
+}
+.icons .team{
+    grid-area: 1 / 2 / 3 / 3;
+}
+.icons .karma{
+    grid-area: 3 / 2 / 5 / 3;
+}
+.icons .calc{
+    grid-area: 2 / 3 / 4 / 4;
+}
+.icons > div .title-2{
+    color: var(--Very-Dark-Blue);
+    margin-bottom: 10px;
+}
+.icons > div .p-1{
+    color: var(--Grayish-Blue);
+    margin-bottom: 50px;
+}
+.icons > div img{
+    position: absolute;
+    right: 25px;
+}
+@media (max-width: 425px){
+    .container{
+        max-width: 400px;
+    }
+    .container .title{
+        width: 350px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 25px;
+    }
+    .container .title span{
+        font-size: 25px;
+    }
+    .container .about{
+        max-width: 320px;
+    }
+    .icons{
+        display: flex;
+        flex-direction: column;
+    }
+}
